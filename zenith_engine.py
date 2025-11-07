@@ -1,10 +1,10 @@
 """
-Script de teste da Fase 2 para o Zenith-Core.
+Módulo Principal do Zenith-Core (O Motor)
 
-Este script executa o 'cérebro' completo do Zenith (System Instructions) com um 
-prompt de RAG manual para validar a lógica em um ambiente local.
+Este arquivo define a lógica central para interagir com a API do Gemini,
+carregando as instruções de sistema e os prompts do módulo 'prompts.py'.
 
-Esta versão foi refatorada para importar os prompts do módulo 'prompts.py'.
+Ele é projetado para ser importado por outros scripts (como o main.py).
 """
 
 import os
@@ -61,7 +61,7 @@ def generate():
         ]
 
         # 4. Executa a chamada da API (não-stream) e obtém a resposta
-        print("--- Enviando solicitação para o Zenith (Fase 2 - Refatorado) ---")
+        print("--- Enviando solicitação para o Zenith (Fase 3 - Motor) ---")
         
         # Usamos generate_content em vez de stream para obter a resposta completa
         response = model.generate_content(
@@ -78,11 +78,3 @@ def generate():
         print(f"Mensagem: {e}")
     finally:
         print("\n--- Fim da Execução ---")
-
-
-# --- 4. Ponto de Entrada do Script ---
-
-if __name__ == "__main__":
-    # Garante que a função generate() só rode 
-    # quando o script é executado diretamente.
-    generate()
