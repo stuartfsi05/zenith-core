@@ -1,0 +1,10 @@
+Nome: Self-Critique Loop
+Definição Operacional: Um processo iterativo onde a IA gera um rascunho, o critica com base em critérios, e o refina.
+Triggers de Ativação: NT=[G/P], RQ=[M], RR=[A]. Usado quando a qualidade da saída final é a prioridade máxima.
+Análise de Custo: Custo computacional ~2.5x-4x. É a técnica mais "cara".
+Template de Prompt:
+**Tarefa:** {{TAREFA}}
+**Processo de 3 Passos:**
+1. **Rascunho:** Gere uma primeira versão da resposta.
+2. **Autocrítica:** Analise o rascunho com base nos seguintes critérios: {{CRITÉRIO_1}}, {{CRITÉRIO_2}}, {{CRITÉRIO_3}}. Identifique os pontos fracos.
+3. **Versão Final:** Reescreva a resposta, incorporando as melhorias identificadas na autocrítica para produzir uma saída de qualidade máxima.

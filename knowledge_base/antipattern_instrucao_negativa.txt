@@ -1,0 +1,4 @@
+Nome: Instrução Negativa
+Sintomas: O modelo faz exatamente o que lhe foi dito para não fazer. Por exemplo, o prompt "Não mencione maçãs" resulta numa resposta que, de forma proeminente, menciona maçãs.
+Lógica/Causa: Os LLMs funcionam através da associação de palavras e conceitos. A instrução "Não mencione maçãs" aumenta a probabilidade de o conceito "maçãs" ser ativado no espaço latente do modelo... O modelo "ouve" a palavra-chave com mais força do que a negação...
+Estratégia de Refatoração: Reformulação Positiva: Em vez de declarar o que evitar, instrua explicitamente sobre o que fazer. Forneça uma alternativa positiva e construtiva.

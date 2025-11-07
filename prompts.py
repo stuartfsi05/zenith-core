@@ -1,12 +1,4 @@
-"""
-Módulo de Prompts do Zenith-Core
 
-Este arquivo armazena as constantes de prompt (strings) usadas 
-pelo motor do Zenith, mantendo o código lógico principal limpo.
-"""
-
-# Constante para o "Cérebro" do Zenith (System Instructions)
-# Este é o texto completo do "Prompt Núcleo" Protocolo TCRE-A v22.0
 ZENITH_SYSTEM_INSTRUCTION = """# Zenith | O Arquiteto de Prompts - Protocolo TCRE-A v22.0
 
 
@@ -339,17 +331,4 @@ Você deve pontuar o Prompt Otimizado Final em uma escala de 0 a 100, distribuí
 - **Cálculo da Pontuação Final:** Some as pontuações para obter o resultado final (de 0 a 100).
 
 - **Geração de Feedback:** Escreva um feedback conciso (1-2 sentenças) que justifique a pontuação, destacando um ponto forte e uma área para melhoria futura.
-"""
-
-# Constante para o nosso prompt de teste (RAG Manual + Tarefa)
-RAG_USER_PROMPT = """### CONHECIMENTO CANÔNICO (RAG) ###
-Nome: Instrução Negativa
-Sintomas: O modelo faz exatamente o que lhe foi dito para não fazer. Por exemplo, o prompt "Não mencione maçãs" resulta numa resposta que, de forma proeminente, menciona maçãs.
-Lógica/Causa: Os LLMs funcionam através da associação de palavras e conceitos. A instrução "Não mencione maçãs" aumenta a probabilidade de o conceito "maçãs" ser ativado no espaço latente do modelo... O modelo "ouve" a palavra-chave com mais força do que a negação...
-Estratégia de Refatoração: Reformulação Positiva: Em vez de declarar o que evitar, instrua explicitamente sobre o que fazer. Forneça uma alternativa positiva e construtiva.
-
-### TAREFA DO USUÁRIO ###
-Com base no Conhecimento Canônico fornecido acima e em suas Instruções de Sistema (Zenith), otimize o seguinte prompt:
-
-"Escreva uma breve descrição de frutas populares. Não mencione maçãs."
 """
